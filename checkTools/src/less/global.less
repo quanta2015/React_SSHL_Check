@@ -1,0 +1,80 @@
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: #3C4E65;
+  padding: 0;
+  margin: 0;
+  // font-family: Georgia,Microsoft Yahei;
+  color: #666;
+  font-size: 12px;
+  font-family: Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+
+a { color: #333; }
+
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background: #d6e0e0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.fn-hide {
+  display: none!important
+}
+
+.fn-show {
+  display: block!important
+}
+
+.fn-show-f {
+  display: flex!important
+}
+
+
+.m-icon {
+  fontSize: 16px;
+  height: 18px;
+  margin-right:5px;
+}
+
+
+
+.m-del {
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  background: #dd0000;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 999;
+  color: #fff;
+}
+
+.m-del:before, .m-del:after {
+    content: ' ';
+    position: absolute;
+    right: 13px;
+    top: 4px;
+    border-left: 2px solid #eee;
+    height: 20px;
+    width: 0;
+}
+
+.m-del:before {
+  transform: rotate(45deg);
+}
+
+.m-del:after {
+  transform: rotate(-45deg);
+}

@@ -1,0 +1,217 @@
+@import "../../less/var.less";
+
+.g-index {
+  width: @sys-width;
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  background: #fff;
+  min-height: calc(100vh - 40px);
+
+  .m-hd {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .m-fun {
+      right: -80px;
+      width: 80px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      color: #999;
+      flex-direction: column;
+      top: 5px;
+
+      &>span {
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        background: #eee;
+        &.sel {
+          background: #ee0000;
+          color: #fff;
+        }
+        &+span {
+          margin-top: 5px;
+        }
+
+        &:nth-child(2) {
+          background:#336699;
+          color: #fff;
+        }
+      }
+
+      
+
+    }
+
+    .m-menu {
+      display: flex;
+
+      &+.m-menu {
+        margin-top: 10px;
+      }
+
+      .m-sect {
+        width: 50%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .m-filename {
+          flex: 1;
+        }
+
+        &>input[type=file] {
+          opacity: 0;
+          position: absolute;
+          right: 0;
+          width: 80px;
+          z-index: 999;
+          height: 30px;
+          cursor: pointer;
+        }
+        .m-file {
+        }
+
+        .m-upload, .m-file {
+          width: 80px;
+          background: #f9f9f9;
+          border: 1px solid #eee;
+          padding: 5px 10px;
+          text-align: center;
+          border-radius: 3px;
+          // margin-right: 5px;
+          cursor: pointer;
+        }
+
+        &+.m-sect {
+          margin-left: 10px;
+        }
+
+        &:nth-child(2n+1) {
+          max-width: calc((100% - 10px)/2);
+        }
+
+        label {
+          width: 100px;
+          text-align: right;
+          margin-right: 10px;
+        }
+
+      }
+
+      .m-tip {
+        margin: 0 0 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &>span {
+          padding: 7px 7px;
+          background: #eee;
+          font-weight: bold;
+          color: #666;
+          cursor: pointer;
+
+          &.sel {
+            background:#dd0000;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+  }
+
+  .m-bd {
+    flex: 1;
+    background: #aaa;
+
+    .m-tab {
+      background: #eee;
+      border-top: 5px solid #dfdfdf;
+      display: flex;
+
+      span {
+        padding: 5px 10px;
+        display: flex;
+        background: #fff;
+        cursor: pointer;
+
+        &.sel {
+          background:#336699;
+          color: #fff;
+        }
+
+        &+span {
+          margin-left: 5px;
+        }
+
+      }
+
+    }
+
+    .m-ret {
+      background: #fff;
+      border-top: 1px solid #dfdfdf;
+
+      .m-sect {
+        display: flex;
+        flex-direction: column;
+
+        &>.m-tl {
+          background: #333;
+          color: #fff;
+          padding: 5px 10px;
+          position: relative;
+          transition: .3s;
+
+          &>.m-del {
+            display: none;
+            transition:.3s;
+          }
+
+          &:hover .m-del {
+            display: block!important;
+          }
+        }
+
+        &>span {
+          flex: 1;
+        }
+
+        &>.m-line {
+          display: flex;
+          padding: 5px 10px;
+
+          &+.m-line {
+            border-top: 1px solid #eee
+          }
+
+          label {
+            font-weight: bold;
+            color: #20840b;
+          }
+
+          i {
+            font-weight: bold;
+            font-style: normal;
+            color: #ee0000 !important;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
